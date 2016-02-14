@@ -65,12 +65,12 @@ module LED_Verilog(
 		
 		
 	assign LED1 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
-	assign LED2 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
+	assign LED2 = 1'b0 ? 1'b1 : dec_cntr != 1'b1;
 	assign LED3 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
-	assign LED4 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
+	assign LED4 = 1'b0 ? 1'b1 : dec_cntr != 1'b1;
 	assign LED5 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
-	assign LED6 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
+	assign LED6 = 1'b0 ? 1'b1 : dec_cntr != 1'b1;
 	assign LED7 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
-	assign LED8 = 1'b0 ? 1'b1 : dec_cntr == 1'b1;
+	assign LED8 = 1'b0 ? 1'b1 : dec_cntr != 1'b1;
 				
 endmodule

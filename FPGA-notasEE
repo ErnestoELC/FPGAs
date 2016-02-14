@@ -1,0 +1,33 @@
+
+Tipos de ficheros:
+******************
+.bin:  Binarios listos para cargar a la fpga.
+.pcf:  Constraint file. Map the defined ports to the physical pins on the FPGA.
+.vcd:  Fichero Verolog. Banco de pruebas
+.v:    Fichero Verilog. Programa principal a cargar en la FPGA.
+.gtkw: Fichero de simulacion de GTKWave.
+
+
+Generar binario: SINTESIS
+*************************
+$ make sint MEMORY=8k
+
+Generar fichero de simulacion:
+******************************
+
+Nota: hacer make clean antes de generar el fichero de simulacion.
+
+Cargar ficheros en la FPGA
+**************************
+sudo iceprog nombrefichero.bin
+
+Apendices:
+**********
+* 	Permisos:al principio hay problemas de permisos. Hay que ejecutar el comando sudo chown -	 R ernesto:ernesto open-fpga-verilog-tutorial//
+*	The make utility: if you run >make, this program will look for a file called makefile 		and execute it. More about makefile at http://mrbook.org/blog/tutorials/make/
+*	Notes on openSource FPGAs requirements: 
+	-yosys – Synthesizes Verilog
+	-Arachne-pnr – Place and Route
+	-Icestorm – Several tools to actually work with bitstreams, including downloading to the board; also provides the database Arachne-pnr needs to understand the chip
+	http://hackaday.com/2015/08/27/learning-verilog-for-fpgas-hardware-at-last/
+
